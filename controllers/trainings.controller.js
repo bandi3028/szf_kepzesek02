@@ -110,7 +110,7 @@ exports.trainingPhotoUpload = async (req, res, next) => {
         if (!req.files) {
             return res.status(400).json({ success: false, error: "Please upload a file" });
         }
-        const file = req.files.file
+        const file = req.files.image;
         if (!file.mimetype.startsWith('image')) {
             return res.status(400).json({ success: false, error: "Please upload an image file" });
         }
