@@ -102,7 +102,6 @@ exports.trainingPhotoUpload = async (req, res, next) => {
     try {
         console.log(req.params.id);
         console.log(req.files);
-        console.log(req);
         const training = await Training.findById(req.params.id);
         if (!training) {
             return res.status(400).json({ success: false, error: "Not found" });
